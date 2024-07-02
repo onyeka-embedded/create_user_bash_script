@@ -110,4 +110,3 @@ while IFS=";" read -r user groups; do
 done < "$user_file"
 
 ) | tee -a ./var/log/user_management.log
-
