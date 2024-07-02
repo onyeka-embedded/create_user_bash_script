@@ -93,7 +93,6 @@ while IFS=";" read -r user groups; do
     #create group with the same name as the user
     sudo usermod -aG "$user" "$user"
 
-    #extract the groups one by one
     IFS=',' read -ra group_array <<< "$groups"
     for group in "${group_array[@]}"; do
         group=$(echo $group | xargs)
